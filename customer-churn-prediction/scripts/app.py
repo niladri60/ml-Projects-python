@@ -7,10 +7,11 @@ app = Flask(__name__)
 
 # Load model and encoders
 try:
-    model = joblib.load('models/churn_model.pkl')
-    encoders = joblib.load('models/encoders.pkl')
-    feature_columns = joblib.load('models/feature_columns.pkl')
-except:
+    model = joblib.load('../models/churn_model.pkl')  # Added ../
+    encoders = joblib.load('../models/encoders.pkl')  # Added ../
+    feature_columns = joblib.load('../models/feature_columns.pkl')  # Added ../
+except Exception as e:
+    print(f"Error loading model: {e}")
     print("Please train the model first!")
     exit()
 
