@@ -6,7 +6,7 @@ from sklearn.metrics import classification_report, accuracy_score
 from sklearn.preprocessing import LabelEncoder
 import joblib
 import os
-from notebooks.generate_sample_data import generate_sample_data
+from generate_sample_data import generate_sample_data
 
 
 def prepare_data(df):
